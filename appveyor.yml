@@ -1,0 +1,4 @@
+build_script:
+  - src\packages\FAKE\tools\Fake.exe src\build.fsx
+
+test: off
