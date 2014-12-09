@@ -10,7 +10,7 @@ Target "Start" (fun _ ->
     trace "Started building fixfsproj solution"
 )
 
-Target "Build Utils" (fun _ -> 
+Target "Build TestFixFsProj" (fun _ -> 
     !! (dir + "/**/*.fsproj")
        |> MSBuildRelease ("./" + dir + "/bin/Release") "Build"
        |> Log "TestFixFsProj output:"
@@ -21,7 +21,7 @@ Target "Finish" (fun _ ->
 )
 
 "Start"
-==> "Build Utils"
+==> "Build TestFixFsProj"
 ==> "Finish"
 
 RunTargetOrDefault "Finish"     

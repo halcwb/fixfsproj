@@ -157,9 +157,11 @@ module Fix =
             dir |> filesWithExt "fsproj"
                 |> List.map (fun f -> printfn "%s" f.Name; f)
                 |> List.iter(fun f -> 
-                    let bu = f |> backupFile
-                    printfn "Created backup: %s" bu.Name
                     let xdoc = f |> fileToXml
+                    let bu = 
+                        f |> backupFile
+                    bu |> xmlToFile xdoc
+                    printfn "Created backup: %s" bu.Name
                     replacements
                     |> List.iter(fun (o, n) ->
                         xdoc.InnerXml <- xdoc.InnerXml.Replace(o, n))
