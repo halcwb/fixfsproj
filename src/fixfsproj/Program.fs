@@ -158,19 +158,24 @@ module Fix =
                 |> List.map (fun f -> printfn "%s" f.Name; f)
                 |> List.iter(fun f -> 
                     let xdoc = f |> fileToXml
-                    let bu = 
-                        f |> backupFile
-                    bu |> xmlToFile xdoc
-                    printfn "Created backup: %s" bu.Name
+                    let orig = xdoc.InnerXml
+                    // Process the replacements
                     replacements
                     |> List.iter(fun (o, n) ->
                         xdoc.InnerXml <- xdoc.InnerXml.Replace(o, n))
                     printfn "Processed: %s" f.Name
+                    // If new xdoc has different xml than original, make backup
+                    if orig <> xdoc.InnerXml then
+                        let bu = 
+                            f |> backupFile
+                        bu |> xmlToFile xdoc
+                        printfn "Created backup: %s" bu.Name
+                    // Write new xml to file
                     f |> xmlToFile xdoc
                     )
                             
     
-
+        Console.WriteLine("Press any key to continue..") 
         Console.ReadKey() |> ignore
 
         0 // return an integer exit code
