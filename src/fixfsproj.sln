@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fixfsproj", "fixfsproj\fixfsproj.fsproj", "{07B99592-2CB8-4D75-9CB1-2113D1CF8B44}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TestFixFsProj", "TestFixFsProj\TestFixFsProj.fsproj", "{28917FEC-2E04-4BAC-A127-6B569D04AC47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07B99592-2CB8-4D75-9CB1-2113D1CF8B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B99592-2CB8-4D75-9CB1-2113D1CF8B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B99592-2CB8-4D75-9CB1-2113D1CF8B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B99592-2CB8-4D75-9CB1-2113D1CF8B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28917FEC-2E04-4BAC-A127-6B569D04AC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28917FEC-2E04-4BAC-A127-6B569D04AC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28917FEC-2E04-4BAC-A127-6B569D04AC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28917FEC-2E04-4BAC-A127-6B569D04AC47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
