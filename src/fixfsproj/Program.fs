@@ -10,11 +10,9 @@ module Fix =
     [<Literal>]
     let currDir = @"c:\Users\hal\Dropbox\Development\"
     [<Literal>]
-    let oldVersion = @"	  <PropertyGroup Condition="" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "">"
+    let oldVersion = @"</Name>"
     [<Literal>]
-    let newVersion = @"	<TargetFSharpCoreVersion>4.3.0.0</TargetFSharpCoreVersion>
-      </PropertyGroup>
-      <PropertyGroup Condition="" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "">"
+    let newVersion = @"</Name><TargetFSharpCoreVersion>4.3.0.0</TargetFSharpCoreVersion>"
     [<Literal>]
     let oldImport = @"<Import Project=""$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets"" Condition="" Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')"" />"
     [<Literal>]
@@ -32,11 +30,9 @@ module Fix =
 	    </Choose>
         <Import Project=""$(FSharpTargetsPath)"" Condition=""Exists('$(FSharpTargetsPath)')"" />"
     [<Literal>]
-    let oldInclude = @"    <Reference Include=""FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"">
-          <Private>True</Private>"
+    let oldInclude = @"<Reference Include=""FSharp.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"">"
     [<Literal>]
-    let newInclude = @"	<Reference Include='FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'>
-	    <Private>True</Private>"
+    let newInclude = @"<Reference Include='FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'>"
 
 
     let replacements = 
