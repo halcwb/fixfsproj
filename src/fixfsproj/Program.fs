@@ -175,7 +175,4 @@ module Fix =
                     )
                             
     
-        Console.WriteLine("Press any key to continue..") 
-        Console.ReadKey() |> ignore
-
         0 // return an integer exit code
