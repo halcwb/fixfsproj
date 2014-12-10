@@ -137,7 +137,11 @@ module Fix =
         find doc
 
     let backupFile (file: FileInfo) = 
-        new FileInfo(file.DirectoryName + "/" + file.Name + ".backup")
+        let n = file.DirectoryName + "/" + file.Name + ".backup"
+        if File.Exists(n) then None
+        else
+            file.CopyTo(n) |> Some
+
 
 
     [<EntryPoint>]
@@ -164,8 +168,8 @@ module Fix =
                     if orig <> xdoc.InnerXml then
                         let bu = 
                             f |> backupFile
-                        bu |> xmlToFile xdoc
-                        printfn "Created backup: %s" bu.Name
+                        if bu.IsSome then 
+                            printfn "Created backup: %s" bu.Value.Name
                     // Write new xml to file
                     f |> xmlToFile xdoc
                     )
