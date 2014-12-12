@@ -1,6 +1,6 @@
 ﻿#r @"packages\FAKE\tools\FakeLib.dll"
 
-System.IO.Directory.SetCurrentDirectory (__SOURCE_DIRECTORY__)
+//System.IO.Directory.SetCurrentDirectory (__SOURCE_DIRECTORY__)
 
 open Fake
 

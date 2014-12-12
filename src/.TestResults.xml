@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\hal\Dropbox\Development\Tools\fixfsproj\src\bin\Release\TestFixFsProj.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-12" time="19:47:45">
+<test-results name="C:\Users\hal\Dropbox\Development\Tools\fixfsproj\src\bin\Release\TestFixFsProj.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-12" time="20:01:24">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Users\hal\Dropbox\Development\Tools\fixfsproj\src" machine-name="HAL-WINDOWS7" user="hal" user-domain="HAL-WINDOWS7" />
   <culture-info current-culture="nl-NL" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\hal\Dropbox\Development\Tools\fixfsproj\src\bin\Release\TestFixFsProj.dll" executed="True" result="Failure" success="False" time="0.068" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\hal\Dropbox\Development\Tools\fixfsproj\src\bin\Release\TestFixFsProj.dll" executed="True" result="Failure" success="False" time="0.084" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestFixFsProj" executed="True" result="Failure" success="False" time="0.053" asserts="0">
+      <test-suite type="Namespace" name="TestFixFsProj" executed="True" result="Failure" success="False" time="0.065" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="Given a non existent directory" executed="True" result="Failure" success="False" time="0.051" asserts="0">
+          <test-suite type="TestFixture" name="Given a non existent directory" executed="True" result="Failure" success="False" time="0.060" asserts="0">
             <results>
-              <test-case name="TestFixFsProj.Given a non existent directory.List directories will return an empty list" executed="True" result="Failure" success="False" time="0.039" asserts="1">
+              <test-case name="TestFixFsProj.Given a non existent directory.List directories will return an empty list" executed="True" result="Failure" success="False" time="0.048" asserts="1">
                 <failure>
                   <message><![CDATA[  Expected: <<false>>
   But was:  True
