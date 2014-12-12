@@ -16,18 +16,12 @@ Target "Build fixfsproj" (fun _ ->
        |> Log "fixfsproj output:"
 )
 
-Target "Build TestFixFsProj" (fun _ -> 
-    !! (dir + "/**/*.fsproj")
-       |> MSBuildRelease ("./" + dir + "/bin/Release") "Build"
-       |> Log "TestFixFsProj output:"
-)
 
 Target "Finish" (fun _ -> 
     trace "Finished building fixfsproj solution"
 )
 
 "Start"
-==> "Build TestFixFsProj"
 ==> "Build fixfsproj"
 ==> "Finish"
 
